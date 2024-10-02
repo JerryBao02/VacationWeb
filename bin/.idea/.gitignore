@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignore Eclipse/IDEA config files
+.classpath
+.project
+.settings/
+.idea/
+
+# Ignore build output directories
+bin/
+target/
+
+# Ignore log files
+*.log
