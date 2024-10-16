@@ -2,7 +2,6 @@ package com.zentravel.vacation_web.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDate;
 
