@@ -1,4 +1,9 @@
 package com.zentravel.vacation_web.utils;
 
-public class JWTUtils {
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class JWTUtils{
+
 }

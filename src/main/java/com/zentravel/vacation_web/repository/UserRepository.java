@@ -1,4 +1,12 @@
 package com.zentravel.vacation_web.repository;
 
-public class UserRepository {
+import com.zentravel.vacation_web.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    boolean existEmail(String email);
+
+    Optional<User> findByEmail(String email);
 }
