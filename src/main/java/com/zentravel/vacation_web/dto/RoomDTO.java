@@ -13,7 +13,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class RoomDTO {
 
-    private Long id; // Room Id
+    private Long id; // Room id
     private String hotel; // Name of the hotel
     private int bed; // Number of beds
     private LocalDate checkInDate;  // Date that you check in

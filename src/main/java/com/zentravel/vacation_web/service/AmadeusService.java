@@ -1,20 +1,25 @@
 package com.zentravel.vacation_web.service;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.amadeus.Amadeus;
+import com.amadeus.Params;
+import com.amadeus.exceptions.ResponseException;
+import com.amadeus.resources.CheckinLink;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AmadeusService {
-
-    @Value("${amadeus.api.key}")
-    private String apiKey;
-
-    @Value("${amadeus.api.secret}")
-    private String apiSecret;
-
-    public void makeApiCall() {
-        // API call logic
-        System.out.println("API Key: " + apiKey);
-        System.out.println("API Secret: " + apiSecret);
-    }
+//
+//    private final Amadeus amadeus;
+//
+//    @Autowired
+//    public AmadeusService(Amadeus amadeus) {
+//        this.amadeus = amadeus;
+//    }
+//
+//    public CheckinLink[] getCheckinLinks(String airlineCode) throws ResponseException {
+//        return amadeus.referenceData.urls.checkinLinks.get(
+//                Params.with("airlineCode", airlineCode)
+//        );
+//    }
 }
