@@ -11,7 +11,6 @@ function LoginPage() {
 
   const from = location.state?.from?.pathname || '/home';
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
