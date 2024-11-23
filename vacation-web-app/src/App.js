@@ -1,26 +1,27 @@
-
-
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LoginPage from "./components/auth/LoginPage";
-import RegisterPage from "./components/auth/RegisterPage"; // Update with correct path
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/navBar/Home.js";
+import Login from "./components/auth/LoginPage";
+import Flight from "./components/navBar/Flight"; // Import the FlightTickets component
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <div className="content">
-          <Routes>
-            {/* Public Routes */}
-            <Route exact path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-
-            {/* Fallback Route */}
-            <Route path="*" element={<Navigate to="/login" />} />
-          </Routes>
-        </div>
+    <Router>
+      <div>
+        <nav className="topnav">
+          <Link to="/" className="brand">Zen Travel</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/about">About</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/flights" element={<Flight />} /> {/* Define route for FlightTickets page */}
+          
+          {/* Add other routes here */}
+        </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
