@@ -1,10 +1,7 @@
 package com.zentravel.vacation_web.utils;
 
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import org.jetbrains.annotations.NotNull;
-import org.springframework.cglib.core.internal.Function;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +10,12 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Date;
+import java.util.function.Function;
 
 @Service
-public class JWTUtils{
+public class JWTUtils {
+
+
     private static final long EXPIRATION_TIME = 1000 * 60 * 24 * 7; //for 7 days
 
     private final SecretKey Key;
@@ -27,7 +27,7 @@ public class JWTUtils{
 
     }
 
-    public String generateToken(@NotNull UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .subject(userDetails.getUsername())
                 .issuedAt(new Date(System.currentTimeMillis()))
@@ -40,11 +40,11 @@ public class JWTUtils{
         return extractClaims(token, Claims::getSubject);
     }
 
-    private <T> T extractClaims(String token, @NotNull Function<Claims, T> claimsTFunction) {
+    private <T> T extractClaims(String token, Function<Claims, T> claimsTFunction) {
         return claimsTFunction.apply(Jwts.parser().verifyWith(Key).build().parseSignedClaims(token).getPayload());
     }
 
-    public boolean isValidToken(String token, @NotNull UserDetails userDetails) {
+    public boolean isValidToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }

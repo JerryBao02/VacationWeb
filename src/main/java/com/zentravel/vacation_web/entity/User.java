@@ -12,7 +12,6 @@ import java.util.List;
 
 @Data
 @Entity
-@Getter @Setter
 @Table(name = "users")
 public class User implements UserDetails{
     @Id
@@ -36,9 +35,6 @@ public class User implements UserDetails{
 
 
     private String role;
-
-
-//    private List<Booking> hotelBookings = new ArrayList<>();
 
 
 //super class methods for User details

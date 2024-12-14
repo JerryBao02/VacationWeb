@@ -35,23 +35,6 @@ public class Utils {
         return userDTO;
     }
 
-    @NotNull
-    public static UserDTO mapUserEntityToUserDTOPlusUserBookingsAndRoom(@NotNull User user) {
-        UserDTO userDTO = new UserDTO();
-
-        userDTO.setId(user.getId());
-        userDTO.setName(user.getName());
-        userDTO.setEmail(user.getEmail());
-        userDTO.setPhoneNumber(user.getPhoneNumber());
-        userDTO.setRole(user.getRole());
-
-//        if (!user.getBookings().isEmpty()) {
-//            userDTO.setBookings(user.getBookings().stream().map(booking -> mapBookingEntityToBookingDTOPlusBookedRooms(booking, false)).collect(Collectors.toList()));
-//        }
-
-        return userDTO;
-    }
-
 
     public static List<UserDTO> mapUserListEntityToUserListDTO(@NotNull List<User> userList) {
         return userList.stream().map(Utils::mapUserEntityToUserDTO).collect(Collectors.toList());
