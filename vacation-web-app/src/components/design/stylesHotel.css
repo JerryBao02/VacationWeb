@@ -1,0 +1,59 @@
+/* Background styling for the Hotel page */
+.Hotel {
+  background-image: url(https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?cs=srgb&dl=pexels-pixabay-258154.jpg&fm=jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; /* Keeping relative for proper content alignment */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Remove margin-top and use padding-top for proper spacing */
+  padding-top: 80px; /* Adjust this based on your navbar height */
+}
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* Adjust to account for navbar height */
+}
+
+/* Search form styling */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.search-form input[type="search"],
+.search-form input[type="date"],
+.search-form input[type="number"] {
+  flex: 1 1 200px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.search-form button {
+  flex: 1 1 100%;
+  padding: 15px;
+  margin: 5px;
+  background-color: #1e8592;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-form button:hover {
+  background-color: #0eabc0;
+}

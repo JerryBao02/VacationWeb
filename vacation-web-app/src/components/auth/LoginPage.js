@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate,useLocation } from "react-router-dom";
-import ApiService from "../../service/ApiService";
+import ApiService from "../ApiService";
+import { Link } from "react-router-dom"; // Import Link for navigation
+
 
 function LoginPage() {
     const [email, setEmail] = useState('');
@@ -58,10 +60,8 @@ function LoginPage() {
                 </div>
                 <button type="submit">Login</button>
             </form>
-
-            <p className="register-link">
-                Don't have an account? <a href="/register">Register</a>
-            </p>
+            <Link to="/register" className="register-link">register</Link>
+    
         </div>
     );
 }
