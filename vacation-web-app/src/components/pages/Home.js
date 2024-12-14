@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import homeStyles from "../design/homeStyles.css"; // Ensure this file exists in your project
+import { Link } from "react-router-dom"; // Import Link for navigation
+import Navbar from "./navBar"; // Import the Navbar component
+import "../design/homeStyles.css"; // Ensure this file exists in your project
 
 const Home = () => {
   // State for slideshow
@@ -33,14 +34,7 @@ const Home = () => {
   return (
     <div>
       {/* Navigation */}
-      <div className="nav-right">
-        <nav className="topnav">
-          <Link to="/" className="brand">Zen Travel</Link>
-          <Link to="/contact" className="nav-link">Contact</Link>
-          <Link to="/about" className="nav-link">About</Link>
-      
-        </nav>
-      </div>
+      <Navbar /> {/* Here we use the Navbar component */}
 
       {/* Slideshow */}
       <div className="slideshow">
@@ -73,7 +67,7 @@ const Home = () => {
           />
           <div className="service-overlay">
             <p className="service-text">Explore with freedom</p>
-            <Link to="/car-rental" className="service-button">Cars</Link>
+            <Link to="/car" className="service-button">Cars</Link>
           </div>
         </div>
         <div className="Hover-Box">
@@ -83,7 +77,7 @@ const Home = () => {
           />
           <div className="service-overlay">
             <p className="service-text">Book your next Flight</p>
-            <Link to="/flight-ticket" className="service-button">Flights</Link>
+            <Link to="/flight" className="service-button">Flight</Link>
           </div>
         </div>
       </div>

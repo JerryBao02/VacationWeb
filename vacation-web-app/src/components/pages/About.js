@@ -1,18 +1,13 @@
 import React from "react";
-import stylesAbout from '../design/stylesAbout.css'; // Make sure to import the CSS file
+import '../design/stylesAbout.css'; // Make sure to import the CSS file
+import Navbar from "./navBar";
+
 
 const About = () => {
   return (
     <div className="About">
-      {/* Navigation */}
-      <div className="topnav">
-        <a href="index.html" className="brand">Zen Travel</a>
-        <a href="Hotel.html">Hotels</a>
-        <a href="Car Rental.html">Car Rental</a>
-        <a href="Flight Ticket.html">Flight Tickets</a>
-        <a href="Contact.html">Contact</a>
-        <a href="About.html" className="active">About</a>
-      </div>
+      <Navbar /> {/* Here we use the Navbar component */}
+
 
       {/* About Containers */}
       <div className="about-container">

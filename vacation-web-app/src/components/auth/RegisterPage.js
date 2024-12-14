@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import ApiService from '../../service/ApiService';
+import ApiService from '../ApiService';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom"; // Import Link for navigation
+
 
 function RegisterPage() {
     const navigate = useNavigate();
@@ -85,9 +87,9 @@ function RegisterPage() {
                 </div>
                 <button type="submit">Register</button>
             </form>
-            <p className="register-link">
-                Already have an account? <a href="/login">Login</a>
-            </p>
+            <Link to="/" className="register-link">Sign In</Link>
+
+
         </div>
     );
 }

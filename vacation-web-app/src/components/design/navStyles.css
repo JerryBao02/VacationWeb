@@ -1,0 +1,38 @@
+/* Style for fixed navbar */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Change this to your preferred color */
+  padding: 10px 0;
+  z-index: 1000; /* Makes sure the navbar stays on top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topnav .nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.topnav .nav-link:hover {
+  color: black;
+}
+
+.topnav .brand {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.brand{
+  padding-left: 5px;
+}
+
+/* Optional: Adding some space at the top of the page for the navbar */
+body {
+  margin-top: 60px; /* Adjust this based on your navbar height */
+}

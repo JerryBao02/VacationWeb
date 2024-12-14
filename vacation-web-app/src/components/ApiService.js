@@ -60,6 +60,14 @@ export default class ApiService {
         return response.data;
     }
 
+
+
+
+
+
+
+
+
     /** AUTHENTICATION CHECKER */
 
     // Logout user by clearing token and role from local storage
@@ -85,4 +93,7 @@ export default class ApiService {
         const role = localStorage.getItem("role");
         return role === "USER";
     }
+
+
+
 }

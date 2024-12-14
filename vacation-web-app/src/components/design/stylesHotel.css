@@ -1,59 +1,27 @@
+/* Background styling for the Hotel page */
 .Hotel {
   background-image: url(https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?cs=srgb&dl=pexels-pixabay-258154.jpg&fm=jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: fixed;
+  position: relative; /* Keeping relative for proper content alignment */
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  /* Remove margin-top and use padding-top for proper spacing */
+  padding-top: 80px; /* Adjust this based on your navbar height */
 }
 
-.topnav {
-  overflow: hidden;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.topnav .brand {
-  font-size: 40px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.topnav a:not(.brand):hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-}
-
-.topnav a.active {
-  color: #1e8592;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-}
-
+/* Search container styling */
 .search-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px); /* Adjust to account for navbar height */
 }
 
+/* Search form styling */
 .search-form {
   display: flex;
   flex-wrap: wrap;
